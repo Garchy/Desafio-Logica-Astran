@@ -28,4 +28,23 @@ def desafio1():
       f' // Media = {sum(alunoNota[aluno].values())/len(alunoNota[aluno].values())}')
 
 
-desafio1()
+def desafio2(palavra):
+  maior = -1
+  for p in palavra:
+    if ord(p) > maior:
+      maior = ord(p)
+  print(chr(maior))
+
+def desafio3(nome):
+  listaNome = []
+  ultimoNome = nome.split(' ')[len(nome.split(' '))-1]
+  
+  for nomes in range(len(nome.split(' '))):
+    if nome.split(' ')[nomes] != ultimoNome:
+      listaNome.append(nome.split(' ')[nomes][0])
+  
+  nomes = '.'.join(listaNome)
+  print(f'{ultimoNome.upper()}, {nomes}.')
+
+
+desafio3('George Raymond Richard Martin')
